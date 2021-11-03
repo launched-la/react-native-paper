@@ -14,7 +14,7 @@ type Props = Partial<React.ComponentPropsWithRef<typeof View>> & {
   /**
    * Whether the background color is a dark color. A dark appbar will render light text and vice-versa.
    */
-  dark?: boolean;
+  dark?: boolean; 
   /**
    * Content of the `Appbar`.
    */
