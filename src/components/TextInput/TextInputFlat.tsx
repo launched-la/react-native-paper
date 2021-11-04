@@ -64,6 +64,7 @@ class TextInputFlat extends React.Component<ChildTextInputProps> {
       error,
       selectionColor,
       underlineColor,
+      activeLabelColor,
       dense,
       style,
       theme,
@@ -275,6 +276,7 @@ class TextInputFlat extends React.Component<ChildTextInputProps> {
       paddingOffset: { paddingLeft, paddingRight },
       hasActiveOutline,
       activeColor,
+      activeLabelColor,
       placeholderColor,
       errorColor,
       roundness: theme.roundness,
@@ -313,10 +315,10 @@ class TextInputFlat extends React.Component<ChildTextInputProps> {
       <View style={[containerStyle, viewStyle]}>
         <Underline
           parentState={parentState}
-          underlineColorCustom={underlineColorCustom}
+          underlineColorCustom={'transparent'} // removed underline
           error={error}
           colors={colors}
-          activeColor={activeColor}
+          activeColor={'transparent'} // removed underline
         />
         <View
           style={[

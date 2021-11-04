@@ -13,6 +13,7 @@ const InputLabel = (props: InputLabelProps) => {
     onLayoutAnimatedText,
     hasActiveOutline,
     activeColor,
+    activeLabelColor,
     placeholderStyle,
     baseLabelTranslateX,
     baseLabelTranslateY,
@@ -104,7 +105,7 @@ const InputLabel = (props: InputLabelProps) => {
           labelStyle,
           paddingOffset || {},
           {
-            color: activeColor,
+            color: !activeLabelColor ? activeColor : activeLabelColor,
             opacity: parentState.labeled.interpolate({
               inputRange: [0, 1],
               outputRange: [hasActiveOutline ? 1 : 0, 0],

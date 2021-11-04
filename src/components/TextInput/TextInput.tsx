@@ -60,6 +60,10 @@ export type TextInputProps = React.ComponentPropsWithRef<
    */
   underlineColor?: string;
   /**
+   * Newly added. Color of the label on an active text input.
+   */
+  activeLabelColor?: string;
+  /**
    * Outline color of the input.
    */
   outlineColor?: string;
