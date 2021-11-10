@@ -139,7 +139,6 @@ class TextInputFlat extends React.Component<ChildTextInputProps> {
 
     let inputTextColor,
       activeColor,
-      underlineColorCustom,
       placeholderColor,
       errorColor;
 
@@ -149,13 +148,11 @@ class TextInputFlat extends React.Component<ChildTextInputProps> {
         .rgb()
         .string();
       placeholderColor = colors.disabled;
-      underlineColorCustom = 'transparent';
     } else {
       inputTextColor = colors.text;
       activeColor = error ? colors.error : colors.primary;
       placeholderColor = colors.placeholder;
       errorColor = colors.error;
-      underlineColorCustom = underlineColor || colors.disabled;
     }
 
     const containerStyle = {
